@@ -11,17 +11,17 @@ To use:
 
 Settings:
 
-Mat: The material that will be applied to the dungeon
-DungeonWidth and Height: The size of the dungeon in tiles
-TileSize: The size of the tiles
-WallThickness: The thickness of the walls
-WallHeight: The height of the walls
-RoomDensity: Then number of rooms we will attempt to spawn within the given limits
-Max/MinRoomWidth: Maximum and minimum room width
-Max/MinRoomHeight: Maximum and minimum room height
-Windiness: How windy the corridors will be. 0 means that when deciding which direction to grow the corridor in, we will try and use the same as previous growth. 1 means choose a completely random direction within the ones available
-UndoOpenChance: When we undo the corridors, this is the chance we have to create an additional opening in an adjacent wall
-RemovePillars: There is a chance of lone corners remaining that creating additional openings with UndoOpenChance. When this in enabled, it removes them.
-Seed: The seed with which we generate the dungeon
-GenerateOnSpawn: If enabled, dungeon will be generated on spawn
-GenerateOnValueChange: If enabled, dungeon will be generated every time a value is changed in the inspector
+- Mat: The material that will be applied to the dungeon
+- DungeonWidth and Height: The size of the dungeon in tiles
+- TileSize: The size of the tiles
+- WallThickness: The thickness of the walls
+- WallHeight: The height of the walls
+- RoomDensity: Then number of rooms we will attempt to spawn within the given limits
+- Max/MinRoomWidth: Maximum and minimum room width
+- Max/MinRoomHeight: Maximum and minimum room height
+- Windiness: How windy the corridors will be. 0 means that when deciding which direction to grow the corridor in, we will try and use the same as previous growth. 1 means choose a completely random direction within the ones available
+- UndoOpenChance: When we undo the corridors, this is the chance we have to create an additional opening in an adjacent wall
+- RemovePillars: There is a chance of lone corners remaining that creating additional openings with UndoOpenChance. When this in enabled, it removes them.
+- Seed: The seed with which we generate the dungeon
+- GenerateOnSpawn: If enabled, dungeon will be generated on spawn
+- GenerateOnValueChange: If enabled, dungeon will be generated every time a value is changed in the inspector
