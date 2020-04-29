@@ -81,7 +81,7 @@ public class DunGen : MonoBehaviour
 
     private const int maxInt = 2147399999; // because actual max int overflows when used with range attribute for some reason
 
-    [Range(1, maxInt)]
+    [Range(2, maxInt)]
     public int dungeonWidth, dungeonHeight;
 
     public float tileSize, wallThickness, wallHeight;
