@@ -25,3 +25,7 @@ Settings:
 - Seed: The seed with which we generate the dungeon
 - GenerateOnSpawn: If enabled, dungeon will be generated on spawn
 - GenerateOnValueChange: If enabled, dungeon will be generated every time a value is changed in the inspector
+
+An Example:
+
+![Example](https://i.imgur.com/TeeTSI6.png)
