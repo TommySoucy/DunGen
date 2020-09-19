@@ -390,7 +390,6 @@ public class DunGen : MonoBehaviour
                         case 0:
                             //grow up
                             tiles[currentCoord].walls = (byte)(tiles[currentCoord].walls & 14);
-                            UpdateCorners(currentCoord, 9);
 
                             tiles[availableCoords[0]] = new Tile(availableCoords[0], region, 11, 15);
                             regionTiles[region].Add(availableCoords[0]);
@@ -399,7 +398,6 @@ public class DunGen : MonoBehaviour
                         case 1:
                             //grow right
                             tiles[currentCoord].walls = (byte)(tiles[currentCoord].walls & 13);
-                            UpdateCorners(currentCoord, 3);
 
                             tiles[availableCoords[1]] = new Tile(availableCoords[1], region, 7, 15);
                             regionTiles[region].Add(availableCoords[1]);
@@ -408,7 +406,6 @@ public class DunGen : MonoBehaviour
                         case 2:
                             //grow down
                             tiles[currentCoord].walls = (byte)(tiles[currentCoord].walls & 11);
-                            UpdateCorners(currentCoord, 6);
 
                             tiles[availableCoords[2]] = new Tile(availableCoords[2], region, 14, 15);
                             regionTiles[region].Add(availableCoords[2]);
@@ -417,7 +414,6 @@ public class DunGen : MonoBehaviour
                         case 3:
                             //grow left
                             tiles[currentCoord].walls = (byte)(tiles[currentCoord].walls & 7);
-                            UpdateCorners(currentCoord, 12);
 
                             tiles[availableCoords[3]] = new Tile(availableCoords[3], region, 13, 15);
                             regionTiles[region].Add(availableCoords[3]);
@@ -830,7 +826,6 @@ public class DunGen : MonoBehaviour
                                 if (removePillars)
                                 {
                                     UpdateCorners(currentTile.coords, 9);
-                                    UpdateCorners(currentTile.coords, 6);
                                 }
                                 break;
                             case 1:
@@ -839,7 +834,6 @@ public class DunGen : MonoBehaviour
                                 if (removePillars)
                                 {
                                     UpdateCorners(currentTile.coords, 3);
-                                    UpdateCorners(currentTile.coords, 12);
                                 }
                                 break;
                             case 2:
@@ -848,7 +842,6 @@ public class DunGen : MonoBehaviour
                                 if (removePillars)
                                 {
                                     UpdateCorners(currentTile.coords, 6);
-                                    UpdateCorners(currentTile.coords, 9);
                                 }
                                 break;
                             case 3:
@@ -857,7 +850,6 @@ public class DunGen : MonoBehaviour
                                 if (removePillars)
                                 {
                                     UpdateCorners(currentTile.coords, 12);
-                                    UpdateCorners(currentTile.coords, 3);
                                 }
                                 break;
                             default:
@@ -2265,11 +2257,11 @@ public class DunGen : MonoBehaviour
                 {
                     tiles[coords].corners = (byte)(tiles[coords].corners & 11);
                     if (tiles.ContainsKey(downCoords))
-                        tiles[downCoords].corners = (byte)(tiles[downCoords].corners | 7);
+                        tiles[downCoords].corners = (byte)(tiles[downCoords].corners & 7);
                     if (tiles.ContainsKey(downLeftCoords))
-                        tiles[downLeftCoords].corners = (byte)(tiles[downLeftCoords].corners | 14);
+                        tiles[downLeftCoords].corners = (byte)(tiles[downLeftCoords].corners & 14);
                     if (tiles.ContainsKey(leftCoords))
-                        tiles[leftCoords].corners = (byte)(tiles[leftCoords].corners | 13);
+                        tiles[leftCoords].corners = (byte)(tiles[leftCoords].corners & 13);
                 }
             }
 
